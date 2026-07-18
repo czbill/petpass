@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PetPass Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for PetPass — a local-first pet health passport app." />
+  <style>
+    :root {
+      --ink: #14201a;
+      --muted: #4a5a52;
+      --paper: #f7f5f1;
+      --stamp: #1b4332;
+      --line: #d9e0db;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+        "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #e7efe9 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #efe8dc 0%, transparent 50%),
+        var(--paper);
+      line-height: 1.65;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    header {
+      margin-bottom: 28px;
+    }
+    .brand {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--stamp);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin: 20px 0 0;
+    }
+    .lang-switch button {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--stamp);
+      border-color: var(--stamp);
+      color: #fff;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 22px 8px;
+      margin: 18px 0 28px;
+    }
+    .card p { margin-top: 0; }
+    h2 {
+      margin: 32px 0 10px;
+      font-size: 1.2rem;
+      color: var(--stamp);
+    }
+    h3 {
+      margin: 20px 0 8px;
+      font-size: 1.02rem;
+    }
+    ul { padding-left: 1.2em; }
+    li { margin: 0.35em 0; }
+    a { color: var(--stamp); }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .hidden { display: none; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+      background: #eef3f0;
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">PetPass</div>
+      <h1 id="title">Privacy Policy</h1>
+      <p class="meta" id="meta">
+        Effective date: July 18, 2026<br />
+        Last updated: July 18, 2026<br />
+        App: PetPass (Bundle ID / package: <code>io.petpass.app</code>)
+      </p>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" id="btn-en" aria-pressed="true" onclick="setLang('en')">English</button>
+        <button type="button" id="btn-zh" aria-pressed="false" onclick="setLang('zh')">中文</button>
+      </div>
+    </header>
+
+    <!-- English -->
+    <article id="en">
+      <div class="card">
+        <p><strong>Short version:</strong> PetPass is local-first. Your pet profiles, health records, photos, reminders, and backups stay on your device. We do not create accounts, do not sync medical data to a PetPass cloud, and do not include analytics or crash reporting in this version. Network use is limited to Apple / Google in-app purchase validation when you buy or restore Pro.</p>
+      </div>
+
+      <h2>1. Who we are</h2>
+      <p>This Privacy Policy explains how the PetPass mobile application (“PetPass”, “the App”, “we”, “us”) handles information when you use the App on iOS or Android.</p>
+      <p>PetPass is a personal pet health passport tool for storing vaccines, deworming/medication, weight, clinic notes, and related records offline on your phone.</p>
+
+      <h2>2. Scope</h2>
+      <p>This Policy applies to the PetPass app distributed under the identifier <code>io.petpass.app</code>, including optional Pro features and the iOS Home Screen Widget (when available).</p>
+      <p>It does not apply to third-party websites, stores, or apps you may open via system share sheets or store links.</p>
+
+      <h2>3. Information stored on your device</h2>
+      <p>PetPass does <strong>not</strong> require a PetPass account or login. Content you enter is stored locally on your device (and, where the OS provides it, in related local app storage such as an App Group used by the widget).</p>
+      <p>Depending on how you use the App, this may include:</p>
+      <ul>
+        <li><strong>Pet profile data</strong> — name, species, breed, gender, birth date or approximate age, microchip ID, and optional pet photo.</li>
+        <li><strong>Health records</strong> — vaccines, deworming/medication, weight entries, clinic name/phone, notes, dates, and next-due dates.</li>
+        <li><strong>Media</strong> — photos you attach (for example pet photos or vaccine card images).</li>
+        <li><strong>App preferences</strong> — language, theme, weight unit, PDF paper size, reminder lead times, selected widget pet, and Pro unlock status stored locally.</li>
+        <li><strong>Exported files you create</strong> — PDF passports and backup archives you choose to export or share.</li>
+      </ul>
+      <p>We do not operate a PetPass server that receives or stores the above medical content.</p>
+
+      <h2>4. Permissions you may grant</h2>
+      <p>The App may request OS permissions only when needed for features you use:</p>
+      <ul>
+        <li><strong>Camera</strong> — to photograph vaccine cards or pet photos for local records.</li>
+        <li><strong>Photo library</strong> — to attach existing images to local records, and (where applicable) to save images you choose to export.</li>
+        <li><strong>Notifications</strong> — to schedule local reminders for upcoming due dates. Reminder scheduling runs on-device via the system notification framework.</li>
+      </ul>
+      <p>You can deny or later revoke these permissions in system settings. Some features will then be unavailable.</p>
+
+      <h2>5. How information is used</h2>
+      <p>On-device information is used solely to provide App features you request, including:</p>
+      <ul>
+        <li>displaying and editing pet passports and timelines;</li>
+        <li>charts (for example weight history);</li>
+        <li>local reminders;</li>
+        <li>PDF export and sharing you initiate;</li>
+        <li>backup export/restore you initiate;</li>
+        <li>Home Screen Widget updates (Pro), using shared local App Group storage on iOS.</li>
+      </ul>
+      <p>We do not sell your data. We do not use pet health records for advertising.</p>
+
+      <h2>6. Network use and third parties</h2>
+      <h3>6.1 In-app purchases (Pro)</h3>
+      <p>If you purchase or restore PetPass Pro, the App uses Apple App Store / Google Play billing APIs. Purchase and restore flows may contact Apple or Google to validate receipts according to their policies. Payment details are processed by Apple or Google, not by PetPass.</p>
+      <p>Product identifier used by the App: <code>petpass_pro</code> (non-consumable / one-time unlock, as configured in the store).</p>
+
+      <h3>6.2 Sharing and exports you initiate</h3>
+      <p>When you share a PDF, backup file, or other export, the destination (Messages, Mail, Files, cloud drives, other apps) is chosen by you through the system share sheet. Those destinations have their own privacy policies. Backup files can include pet names, medical history, and photos — share them only with people you trust.</p>
+
+      <h3>6.3 What we do not include in this version</h3>
+      <ul>
+        <li>No PetPass account system</li>
+        <li>No PetPass cloud sync of medical data</li>
+        <li>No third-party analytics SDKs</li>
+        <li>No crash-reporting SDKs</li>
+        <li>No advertising SDKs</li>
+      </ul>
+      <p>PDF generation uses fonts bundled with the App and does not download fonts from the network.</p>
+
+      <h2>7. Home Screen Widget (iOS)</h2>
+      <p>If you enable the widget (Pro), limited display data (such as selected pet summary and optional photo needed for the widget) may be stored in the iOS App Group <code>group.com.petpass.app</code> so the widget extension can read it. This storage remains on your device and is not uploaded to a PetPass server.</p>
+
+      <h2>8. Children’s privacy</h2>
+      <p>PetPass is not directed at children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children through a PetPass account, because the App does not provide accounts. If you believe a child has entered sensitive information and you need help deleting local data, uninstall the App and/or contact us using the address below.</p>
+
+      <h2>9. Data retention and deletion</h2>
+      <ul>
+        <li><strong>On device:</strong> data remains until you delete individual pets/records, restore a different backup, or uninstall the App.</li>
+        <li><strong>Uninstall:</strong> uninstalling removes local App data, unless you previously exported a backup or saved shared files elsewhere.</li>
+        <li><strong>Exports you keep:</strong> PDFs and backup files you save or share are under your control outside the App.</li>
+      </ul>
+
+      <h2>10. Security</h2>
+      <p>Because data is stored locally, protection depends primarily on your device security (passcode/biometrics, OS updates, and who can unlock the device). We recommend keeping your device locked and sharing backups only with trusted recipients.</p>
+      <p>PetPass uses standard OS networking for store purchase validation where applicable. The App declares that it does not use non-exempt encryption beyond what the platforms provide for such communications.</p>
+
+      <h2>11. International users</h2>
+      <p>PetPass is designed to keep your content on your device. Processing of store purchases is handled by Apple or Google in accordance with their terms and your region’s store settings.</p>
+
+      <h2>12. Medical disclaimer</h2>
+      <p>PetPass helps you organize records you enter. Passports and exports are maintained by the pet owner and are <strong>not</strong> a veterinary diagnosis or an official medical certificate.</p>
+
+      <h2>13. Changes to this Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The “Last updated” date at the top will change when we do. Continued use of the App after an update means you acknowledge the revised Policy. Material changes may also be noted in the App Store / Play Store release notes when practical.</p>
+
+      <h2>14. Contact</h2>
+      <p>If you have privacy questions about PetPass, contact:</p>
+      <p>
+        Email: <a href="mailto:support@petpass.dev">support@petpass.dev</a><br />
+        Developer / publisher: <!-- optional --> PetPass
+      </p>
+    </article>
+
+    <!-- Chinese -->
+    <article id="zh" class="hidden">
+      <div class="card">
+        <p><strong>简要说明：</strong>PetPass 采用本地优先设计。宠物资料、健康记录、照片、提醒与备份都保存在你的设备上。我们不提供账号，不把医疗数据同步到 PetPass 云端，本版本也不包含统计分析或崩溃上报。联网仅用于你购买或恢复 Pro 时，由 Apple / Google 校验收据。</p>
+      </div>
+
+      <h2>1. 我们是谁</h2>
+      <p>本隐私政策说明你在 iOS 或 Android 上使用 PetPass 移动应用（下称「PetPass」「本应用」「我们」）时，信息如何被处理。</p>
+      <p>PetPass 是一款个人宠物健康护照工具，用于在手机离线保存疫苗、驱虫/用药、体重、诊所备注等相关记录。</p>
+
+      <h2>2. 适用范围</h2>
+      <p>本政策适用于标识为 <code>io.petpass.app</code> 分发的 PetPass 应用，包括可选的 Pro 功能，以及（如已提供）iOS 主屏幕小组件。</p>
+      <p>本政策不适用于你通过系统分享面板或商店链接打开的第三方网站、商店或其他应用。</p>
+
+      <h2>3. 保存在你设备上的信息</h2>
+      <p>PetPass <strong>不需要</strong>注册账号或登录。你输入的内容保存在本机（以及系统提供的相关本地存储，例如小组件使用的 App Group）。</p>
+      <p>依你的使用方式，可能包括：</p>
+      <ul>
+        <li><strong>宠物资料</strong>：姓名、物种、品种、性别、出生日期或大约年龄、芯片号，以及可选照片。</li>
+        <li><strong>健康记录</strong>：疫苗、驱虫/用药、体重、诊所名称/电话、备注、日期与下次到期日。</li>
+        <li><strong>媒体</strong>：你附加的照片（例如宠物照或疫苗卡图片）。</li>
+        <li><strong>应用偏好</strong>：语言、主题、体重单位、PDF 纸张尺寸、提醒提前量、小组件所选宠物，以及本地保存的 Pro 解锁状态。</li>
+        <li><strong>你主动导出的文件</strong>：护照 PDF、备份压缩包等。</li>
+      </ul>
+      <p>我们不运营用于接收或存储上述医疗内容的 PetPass 服务器。</p>
+
+      <h2>4. 你可能授予的权限</h2>
+      <p>仅在你使用相关功能时，本应用可能请求系统权限：</p>
+      <ul>
+        <li><strong>相机</strong>：拍摄疫苗卡或宠物照片，用于本地记录。</li>
+        <li><strong>相册</strong>：从相册附加图片到本地记录；在适用情况下，保存你选择导出的图片。</li>
+        <li><strong>通知</strong>：为即将到期的项目安排本地提醒。提醒通过系统通知框架在设备上调度。</li>
+      </ul>
+      <p>你可以在系统设置中拒绝或稍后撤销权限；部分功能将因此不可用。</p>
+
+      <h2>5. 信息如何使用</h2>
+      <p>本机信息仅用于提供你请求的功能，包括：</p>
+      <ul>
+        <li>展示与编辑宠物护照与时间线；</li>
+        <li>图表（例如体重历史）；</li>
+        <li>本地提醒；</li>
+        <li>由你发起的 PDF 导出与分享；</li>
+        <li>由你发起的备份导出/恢复；</li>
+        <li>主屏幕小组件更新（Pro），在 iOS 上通过共享的本地 App Group 存储。</li>
+      </ul>
+      <p>我们不出售你的数据，也不将宠物健康记录用于广告。</p>
+
+      <h2>6. 联网与第三方</h2>
+      <h3>6.1 应用内购买（Pro）</h3>
+      <p>若你购买或恢复 PetPass Pro，本应用会使用 Apple App Store / Google Play 结算接口。购买与恢复流程可能按照其政策联系 Apple 或 Google 以校验收据。支付信息由 Apple 或 Google 处理，而非 PetPass。</p>
+      <p>本应用使用的商品 ID：<code>petpass_pro</code>（非消耗型 / 一次性解锁，以商店配置为准）。</p>
+
+      <h3>6.2 由你发起的分享与导出</h3>
+      <p>当你分享 PDF、备份文件或其他导出内容时，目标应用（信息、邮件、文件、网盘等）由你通过系统分享面板选择，并适用其各自隐私政策。备份可能包含宠物姓名、医疗历史与照片——请仅分享给信任的人。</p>
+
+      <h3>6.3 本版本不包含</h3>
+      <ul>
+        <li>无 PetPass 账号系统</li>
+        <li>无医疗数据的 PetPass 云同步</li>
+        <li>无第三方统计分析 SDK</li>
+        <li>无崩溃上报 SDK</li>
+        <li>无广告 SDK</li>
+      </ul>
+      <p>PDF 使用应用内置字体生成，不会从网络下载字体。</p>
+
+      <h2>7. 主屏幕小组件（iOS）</h2>
+      <p>若你启用小组件（Pro），有限的展示数据（例如所选宠物摘要及小组件所需可选照片）可能保存在 iOS App Group <code>group.com.petpass.app</code>，供小组件扩展读取。该存储仍在你的设备上，不会上传到 PetPass 服务器。</p>
+
+      <h2>8. 儿童隐私</h2>
+      <p>PetPass 不面向 13 岁以下儿童（或以你所在地区等效最低年龄为准）。由于本应用不提供账号，我们不会通过 PetPass 账号故意收集儿童个人信息。若你认为儿童输入了敏感信息并需要协助清理本机数据，可卸载应用，和/或通过下方邮箱联系我们。</p>
+
+      <h2>9. 数据保留与删除</h2>
+      <ul>
+        <li><strong>本机：</strong>数据会保留，直到你删除个别宠物/记录、恢复另一份备份，或卸载应用。</li>
+        <li><strong>卸载：</strong>卸载会清除本机应用数据，除非你此前已导出备份，或把分享文件保存在其他位置。</li>
+        <li><strong>你保留的导出文件：</strong>你保存或分享的 PDF 与备份由你在应用外自行管理。</li>
+      </ul>
+
+      <h2>10. 安全</h2>
+      <p>由于数据主要保存在本机，保护程度首先取决于设备安全（锁屏/生物识别、系统更新，以及谁能解锁设备）。建议保持设备锁定，并仅与可信对象分享备份。</p>
+      <p>在适用情况下，商店购买校验使用系统标准网络通信。本应用声明除平台提供的此类通信外，不使用需额外出口合规说明的非豁免加密。</p>
+
+      <h2>11. 国际用户</h2>
+      <p>PetPass 设计为将内容保留在你的设备上。商店购买相关处理由 Apple 或 Google 按其条款及你所在地区的商店设置进行。</p>
+
+      <h2>12. 医疗免责声明</h2>
+      <p>PetPass 帮助你整理自行录入的记录。护照与导出内容由宠物主人维护，<strong>并非</strong>兽医诊断或官方医疗证明。</p>
+
+      <h2>13. 政策变更</h2>
+      <p>我们可能不时更新本隐私政策。更新时将修改文首「最近更新」日期。你在更新后继续使用本应用，即表示知悉修订后的政策。重大变更在可行时也可能在 App Store / Play 商店版本说明中提示。</p>
+
+      <h2>14. 联系我们</h2>
+      <p>如对 PetPass 的隐私有疑问，请联系：</p>
+      <p>
+        电子邮箱：<a href="mailto:support@petpass.dev">support@petpass.dev</a><br />
+        开发者 / 发布者：PetPass
+      </p>
+    </article>
+
+    <footer>
+      <p>© 2026 PetPass. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      var en = document.getElementById('en');
+      var zh = document.getElementById('zh');
+      var btnEn = document.getElementById('btn-en');
+      var btnZh = document.getElementById('btn-zh');
+      var title = document.getElementById('title');
+      var meta = document.getElementById('meta');
+      var isZh = lang === 'zh';
+      en.classList.toggle('hidden', isZh);
+      zh.classList.toggle('hidden', !isZh);
+      btnEn.setAttribute('aria-pressed', String(!isZh));
+      btnZh.setAttribute('aria-pressed', String(isZh));
+      document.documentElement.lang = isZh ? 'zh-CN' : 'en';
+      title.textContent = isZh ? '隐私政策' : 'Privacy Policy';
+      meta.innerHTML = isZh
+        ? '生效日期：2026年7月18日<br />最近更新：2026年7月18日<br />应用：PetPass（包名 / Bundle ID：<code>io.petpass.app</code>）'
+        : 'Effective date: July 18, 2026<br />Last updated: July 18, 2026<br />App: PetPass (Bundle ID / package: <code>io.petpass.app</code>)';
+      try {
+        localStorage.setItem('petpass-privacy-lang', lang);
+      } catch (e) {}
+    }
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('petpass-privacy-lang'); } catch (e) {}
+      var preferZh = (navigator.language || '').toLowerCase().startsWith('zh');
+      setLang(saved || (preferZh ? 'zh' : 'en'));
+    })();
+  </script>
+</body>
+</html>
