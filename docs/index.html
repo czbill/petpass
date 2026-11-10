@@ -2,11 +2,208 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=privacy.html" />
-  <title>PetPass</title>
-  <link rel="canonical" href="privacy.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PetPass Health — Pet health records, ready to share in 30 seconds</title>
+  <meta name="description" content="PetPass keeps your pet's vaccines, meds, checkups and weight in one place, then exports a complete Health Passport PDF for the vet, boarding or travel. No account, no cloud. One-time purchase, no subscription." />
+  <link rel="canonical" href="https://petpass.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PetPass Health — Vet records, ready to share in 30 seconds" />
+  <meta property="og:description" content="A complete, shareable pet health record PDF. No account. Your records stay on your phone. One-time purchase, no subscription." />
+  <meta property="og:url" content="https://petpass.dev/" />
+  <meta property="og:image" content="https://petpass.dev/assets/passport-export.jpg" />
+  <style>
+    :root {
+      --green: #1B4332;
+      --green-soft: #2D6A4F;
+      --paper: #F7F5F0;
+      --card: #FFFFFF;
+      --ink: #1A1A1A;
+      --muted: #5F6B63;
+      --line: #E3E0D8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    a { color: var(--green); }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 0;
+    }
+    .brand { font-weight: 700; font-size: 20px; color: var(--green); text-decoration: none; }
+    nav a { margin-left: 18px; color: var(--muted); text-decoration: none; font-size: 15px; }
+    nav a:hover { color: var(--green); }
+    .hero {
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px;
+      align-items: center; padding: 48px 0 40px;
+    }
+    h1 { font-size: 40px; line-height: 1.15; color: var(--green); letter-spacing: -0.5px; }
+    .hero p.lead { margin-top: 16px; font-size: 18px; color: var(--muted); }
+    .cta-row { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 13px 22px; border-radius: 12px;
+      font-weight: 600; text-decoration: none; font-size: 16px;
+    }
+    .btn-primary { background: var(--green); color: #fff; }
+    .btn-primary:hover { background: var(--green-soft); }
+    .btn-ghost { border: 1px solid var(--line); background: var(--card); color: var(--green); }
+    .hero small { display: block; margin-top: 14px; color: var(--muted); font-size: 14px; }
+    .hero img {
+      width: 100%; max-width: 320px; border-radius: 24px;
+      border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(27, 67, 50, 0.12);
+      justify-self: center;
+    }
+    section { padding: 40px 0; }
+    h2 { font-size: 26px; color: var(--green); margin-bottom: 18px; letter-spacing: -0.3px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 16px; padding: 20px;
+    }
+    .card h3 { font-size: 17px; margin-bottom: 8px; color: var(--green); }
+    .card p { font-size: 15px; color: var(--muted); }
+    .steps { list-style: none; counter-reset: step; }
+    .steps li {
+      counter-increment: step; position: relative; padding: 14px 0 14px 52px;
+      border-bottom: 1px solid var(--line); font-size: 16px;
+    }
+    .steps li::before {
+      content: counter(step); position: absolute; left: 0; top: 12px;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--green); color: #fff; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 16px; overflow: hidden; }
+    th, td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--line); font-size: 15px; }
+    th { background: var(--green); color: #fff; font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { color: var(--muted); }
+    .price {
+      text-align: center; background: var(--card); border: 1px solid var(--line);
+      border-radius: 20px; padding: 36px 20px;
+    }
+    .price .amount { font-size: 44px; font-weight: 700; color: var(--green); }
+    .price p { color: var(--muted); margin-top: 8px; }
+    .price .btn { margin-top: 18px; }
+    .note { font-size: 14px; color: var(--muted); }
+    footer {
+      border-top: 1px solid var(--line); margin-top: 20px;
+      padding: 24px 0 40px; font-size: 14px; color: var(--muted);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding-top: 28px; }
+      h1 { font-size: 32px; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .hero img { max-width: 260px; }
+    }
+  </style>
 </head>
 <body>
-  <p><a href="privacy.html">PetPass Privacy Policy</a></p>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">PetPass Health</a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/privacy">Privacy</a>
+        <a href="mailto:support@petpass.dev">Support</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h1>Vet records, ready to share in 30&nbsp;seconds.</h1>
+        <p class="lead">
+          Vaccines, meds and checkups — one shareable PDF. PetPass keeps your
+          pet's health story in one place and exports a complete Health
+          Passport when the vet, boarding or travel asks for records.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/petpass-health/id6792501715">Download on the App Store</a>
+          <a class="btn btn-ghost" href="#passport">What's in a passport?</a>
+        </div>
+        <small>No account. Your records stay on your phone.</small>
+      </div>
+      <img src="assets/passport-export.jpg" alt="PetPass Health Passport PDF export on iPhone" width="640" height="1382" />
+    </div>
+
+    <section id="passport">
+      <h2>A complete record pack, not just a summary</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>New vet, no explanations</h3>
+          <p>Hand over vaccines, deworming, medication dosages, checkups, notes, weight history and clinic contacts — with certificate photos attached.</p>
+        </div>
+        <div class="card">
+          <h3>Boarding &amp; pet sitters</h3>
+          <p>Share a clean, readable PDF instead of photographing paper vaccine books and digging through email.</p>
+        </div>
+        <div class="card">
+          <h3>Moving &amp; travel</h3>
+          <p>Your pet's whole health story travels with you, offline. Export and share even without a connection.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>From paper records to a passport in three steps</h2>
+      <ol class="steps">
+        <li><strong>Add your pet.</strong> Photo, breed, microchip. Explore the sample pet first if you just want to see the result.</li>
+        <li><strong>Log what matters.</strong> Vaccines, deworming, medication with dosage, checkups, weight — with local reminders before every due date.</li>
+        <li><strong>Export in about 30 seconds.</strong> Preview the Health Passport PDF and share it through Messages, Mail or Files.</li>
+      </ol>
+    </section>
+
+    <section id="pricing">
+      <h2>Free to start. Pro when you need more.</h2>
+      <table>
+        <tr><th></th><th>Free</th><th>Pro</th></tr>
+        <tr><td>Pets</td><td>1</td><td>Unlimited</td></tr>
+        <tr><td>Records, reminders, weight chart</td><td>Full</td><td>Full</td></tr>
+        <tr><td>Zip backup &amp; restore</td><td>Included</td><td>Included</td></tr>
+        <tr><td>Complete PDF with certificate photos</td><td>With watermark, unlimited</td><td>Watermark-free, unlimited</td></tr>
+        <tr><td>Watermark-free exports</td><td>1</td><td>Unlimited</td></tr>
+        <tr><td>Home Screen widget</td><td>—</td><td>Included</td></tr>
+      </table>
+      <div class="price" style="margin-top: 24px;">
+        <div class="amount">$14.99</div>
+        <p><strong>One-time purchase. No subscription.</strong><br />
+        Pro covers every pet in your home, forever. Restore your purchase anytime.</p>
+        <a class="btn btn-primary" href="https://apps.apple.com/us/app/petpass-health/id6792501715">Get PetPass Health</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Private by design</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>No account, no cloud</h3>
+          <p>Your pet's records, photos and backups stay on your device. There is no PetPass server storing them, and no analytics or advertising SDKs.</p>
+        </div>
+        <div class="card">
+          <h3>Backups you control</h3>
+          <p>Export a zip backup whenever you like and restore it on a new phone. You decide where it goes.</p>
+        </div>
+        <div class="card">
+          <h3>Honest about scope</h3>
+          <p>PetPass organizes records you enter yourself. It is not a veterinary diagnosis or an official medical or travel certificate.</p>
+        </div>
+      </div>
+      <p class="note" style="margin-top: 16px;">
+        The only intentional network use is App Store billing when you buy or restore Pro.
+        Read the <a href="/privacy">privacy policy</a>.
+      </p>
+    </section>
+
+    <footer>
+      <span>© 2026 PetPass · <a href="/privacy">Privacy</a> · <a href="mailto:support@petpass.dev">support@petpass.dev</a></span>
+      <span>Made for people who don't want another subscription.</span>
+    </footer>
+  </div>
 </body>
 </html>
