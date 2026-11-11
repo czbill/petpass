@@ -15,7 +15,7 @@
 
 1. 域名 `petpass.dev` 已在 Cloudflare 购买/托管（Nameservers 用 Cloudflare）
 2. 本仓库已推到 **GitHub**（公开或私有均可；审核员打开的是你的域名网页）
-3. 本地已有 `docs/privacy.html`、`docs/index.html`、`docs/_redirects`
+3. 本地已有 `docs/privacy.html`、`docs/index.html`（无需 `_redirects`：Pages 原生把 `privacy.html` 服务在 `/privacy`，加反向重定向会循环）
 
 若还没推送：
 
